@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Race to Botany Bay</title>
+    <style>
+        body{
+            background-color: rgb(1, 33, 105);
+            color: white;
+            text-align:center;
+        }
+        .div{
+            background-color: rgb(288, 0, 43);
+            padding:10px;
+            margin: 0px 10% 0px 10%;
+        }
+        .div2{
+            background-color: rgb(288, 0, 43);
+            padding:10px;
+            margin: 0px 30% 0px 30%;
+            font-family: 'Brush Script MT', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Race Against France to Botany Bay</h1>
+    <h2>Information</h2>
+    <div class="div">
+        <p>
+            On the 19th of April, 1770, the east coast of Australia was spotted by Captain James Cook onboard the HMB <em>Endeavour</em>. Ten days later, the first landing was made at Botany Bay. After returning to Britain in 1771, the idea of colonising Australia was brought up at two parlimentary inquiries in 1779 and 1785, but to avail. The reasons for the initial rejection of the idea were the price and the East Indies Company. The British Government couldn't afford such a thing, especially after seven years of war against France from 1756 to 1763 and the East Indies Company also had trading rights in the Indian and Pacific Oceans, both of which bordered Australia.
+        </p>
+        <p>
+            France, after losing a number of it's colonies to Britain during the war, decided to attempt colonisation of Australia on an expedition to the Pacific lead by Jean-François de Galaup, comte de La Pérouse. France's ambitions were uncovered by the newly formed United States of America, and were leaked to Britain. Upon hearing this, Britain couldn't care less about money or the East Indies Company. The First Fleet, containing around 1,400 people and led by Captain Arthur Phillip, embarked at Portsmouth, England, bound for Botany Bay. Britain stated that the voyage was for convict transportation, especially since America was no longer an option, so as not to arouse any suspicions.
+        </p>
+        <p>
+            Upon hearing this, France immediately sent a letter to La Pérouse, who was exploring the Northen Pacific at the time. He cancelled the rest of his plans in the Pacific but not before making one last detour to the non-existent 'treasure islands'. He was using a map published by the British Admiralty which had many fake islands. The British knew for a century that the islands didn't exist, but were kept as false islands serve as great sources of confusion for those who came after Cook. Having wasted 3-4 weeks, Phillip beat La Pérouse by only five days. 
+        </p>
+        <p>
+            La Pérouse stayed in Australia for six weeks before embarking and both his ships were never seen again until 40 years later when their wreckage was found on the Solomon Islands. If the British removed the treasure islands from their maps when they were proven fake, Australia's history might have been completely different. Although the British sent 11 ships compared to France's 2, most of them were unarmed convicts with no skills in combat, so Britain wouldn't be able put up much of a fight. Australia would have been a French colony, and it's history woud have been very different.
+        </p>
+        <img id="img" src="route.png" width="70%" onclick="size(this)" ontouchend="size(this)">
+    </div>
+    <h2>Journal Entry from the perspective of a British convict</h2>
+    <div class="div2" onclick="font(0, this)" ontouchend="font(1, this)">
+        20th of January, 1788
+        <br><br>
+        It has been almost six munths sinse I left britun. The governer told us that we shal be arriving at new sowth wails soon. Ive had enuf with this ship, covered in rats and kokroches. I hoep that owr ariivel woent bee delaied anee mor.
+    </div>
+    <h2>Journal Entry from the perspective of Governer Arthur Philip</h2>
+    <div class="div2" onclick="font(1, this)" ontouchend="font(1, this)">
+        26th of January, 1788
+        <br><br>
+        It has been a few hours since we arrived at Botany Bay. The convicts have orders to unload the cargo set up the settlement. I am expecting the French to arrive within a few days, only to discover their defeat. Arriving here before the French must have been a miracle, since they embarked earlier, something I don't quite understand yet.
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    state=1;
+    function size(x){
+        if(state){
+            $(x).animate({width:"100%"}, "slow");
+            state=0;
+        }else{
+            $(x).animate({width:"70%"}, "slow");
+            state=1;
+        }
+    }
+    fs=[0, 0];
+    function font(x, y){
+        if(fs[x]){
+            $(y).css('fontFamily', 'Brush Script MT');
+            fs[x]=0;
+        }else{
+            $(y).css('fontFamily', 'serif');
+            fs[x]=1;
+        }
+        console.log(fs)
+    }
+</script>
+</html>
